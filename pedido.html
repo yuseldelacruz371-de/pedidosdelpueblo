@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedidos del Pueblo</title>
+  <link rel="stylesheet" href="pedido.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-content">
+    <img src="logo/logo de pedidos.jpeg" alt="Pedidos del Pueblo" class="logo">
+    <div>
+      <h1>Pedidos del Pueblo</h1>
+      <p>Entregamos en 6 zonas cercanas, el costo de envío depende de la zona, se confirma por WhatsApp</p>
+    </div>
+  </div>
+</header>
+
+<section id="serviceStatus" class="status"></section>
+
+<main>
+
+  <section class="card">
+    <h2>📍 Zonas con servicio</h2>
+    <div class="zones">
+      <span>Venustiano Carranza</span>
+      <span>Campesina Norte</span>
+      <span>Centro</span>
+      <span>Lázaro Cárdenas (Laja)</span>
+      <span>Lomas</span>
+      <span>Bejuco</span>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>⏰ Horario de entrega</h2>
+    <p class="schedule">6:00 pm – 10:00 pm</p>
+  </section>
+
+  <section class="card">
+    <h2>💲 Comisión por distancia</h2>
+    <table>
+      <tr><th>Zona</th><th>Comisión</th></tr>
+      <tr><td>Venustiano Carranza</td><td>$30</td></tr>
+      <tr><td>Campesina Norte</td><td>$25</td></tr>
+      <tr><td>Centro</td><td>$25</td></tr>
+      <tr><td>Lázaro Cárdenas (Laja)</td><td>$30</td></tr>
+      <tr><td>Lomas</td><td>$40</td></tr>
+      <tr><td>Bejuco</td><td>$50</td></tr>
+    </table>
+  </section>
+
+  <section class="card avisos">
+    <h2>📢 Avisos importantes</h2>
+    <ul>
+      <li>💵 Pago en efectivo al repartidor</li>
+      <li>📲 Comisión confirmada por WhatsApp</li>
+      <li>⏱️ El tiempo de entrega puede variar</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>🛒 ¿Qué deseas pedir?</h2>
+    <div class="grid">
+      <button onclick="showSection('mandado')">Mandado</button>
+      <button onclick="showSection('comida')">Comida</button>
+      <button onclick="showSection('farmacia')">Farmacia</button>
+      <button onclick="showSection('mensajeria')">Algún otro mandado</button>
+    </div>
+  </section>
+
+  <section class="card hidden" id="options"></section>
+
+  <section class="card cart-highlight" id="cartCard">
+    
+    <ul id="cart"></ul>
+
+    <h3>Datos del Cliente</h3>
+    <input placeholder="Nombre *" id="name">
+
+    <select id="zone">
+      <option value="">Selecciona tu zona *</option>
+      <option>Venustiano Carranza</option>
+      <option>Campesina Norte</option>
+      <option>Centro</option>
+      <option>Lázaro Cárdenas (Laja)</option>
+      <option>Lomas</option>
+      <option>Bejuco</option>
+    </select>
+
+    <input placeholder="Calle donde vive" id="street">
+    
+    <input placeholder="Lugar de referencia" id="reference">
+    
+
+    <button class="whatsapp" onclick="sendWhatsApp()">Enviar pedido al WhatsApp</button>
+  </section>
+
+</main>
+
+<script src="pedido.js"></script>
+</body>
+</html>
