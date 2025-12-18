@@ -1,4 +1,4 @@
-const servicioActivo = true; 
+const servicioActivo = false; 
 
 const options = document.getElementById("options");
 const cart = document.getElementById("cart");
@@ -127,3 +127,4 @@ ${items.map(i => "• " + i).join("\n")}
 
   window.open(`https://wa.me/+527811046148?text=${encodeURIComponent(message)}`);
 }
+
